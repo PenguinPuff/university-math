@@ -1,5 +1,4 @@
-just latex
-will keep getting updated regularly
+just latex, will keep getting updated regularly
 
 - Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 
 - Introductory Statistics 
