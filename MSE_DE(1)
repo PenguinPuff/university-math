@@ -91,4 +91,28 @@ Solve the new decoupled system and transform solution back through $y = SZ$ \new
 \begin{equation*} \gamma'(t) = \frac{5}{2} \cdot \gamma(t) - \phi(t) \end{equation*}
 \begin{equation*} \phi'(t) = \frac{-1}{4} \cdot \gamma(t) + \frac{5}{2} \phi(t) \end{equation*}
 matrix form \begin{equation*} \begin{pmatrix} \gamma' \\[6pt] \phi' \end{pmatrix} = \begin{pmatrix} \dfrac{5}{2} & -1 \\[9pt] \dfrac{-1}{4} & \dfrac{5}{2} \end{pmatrix} \begin{pmatrix} \gamma \\[6pt] \phi \end{pmatrix}\end{equation*}
+now, determine the eigenvalues and eigenvectors for the matrix\newline
+\begin{equation*} p_A(\lambda) = \det(A-\lambda I_2) = \det\begin{pmatrix} \dfrac{5}{2} - \lambda & -1 \\[9pt] \dfrac{-1}{4} & \dfrac{5}{2} - \lambda \end{pmatrix} = {\left(\frac{5}{2}-\lambda\right)}^{2} - \frac{1}{4} = \frac{25}{4} + \lambda^{2} - 5\lambda - \frac{1}{4} = 6 + \lambda^{2} -5\lambda = (\lambda-3)(\lambda-2) \end{equation*}
+The roots of the equation are $\lambda_1 = 3$ and $\lambda_2 = 2$ \newline
+For the respective eigenspaces, we get \newline
+\begin{equation*} eig_A(3) = \ker(A-3I_2) = \ker\begin{pmatrix} \dfrac{-1}{2} & -1 \\[9pt] \dfrac{-1}{4} & \dfrac{-1}{2}\end{pmatrix} = \ker\begin{pmatrix} \dfrac{1}{2} & -1 \\[9pt] 0 & 0\end{pmatrix} = span\begin{Bmatrix}\begin{pmatrix} -2 \\1 \end{pmatrix}\end{Bmatrix} \end{equation*}
+\begin{equation*} eig_A(2) = \ker(A-2I_2) = \ker\begin{pmatrix} \dfrac{1}{2} & -1 \\[9pt] \dfrac{-1}{4} & \dfrac{1}{2}\end{pmatrix} = \ker\begin{pmatrix} \dfrac{1}{2} & -1 \\[9pt] 0 & 0\end{pmatrix} = span\begin{Bmatrix}\begin{pmatrix} 2 \\1 \end{pmatrix}\end{Bmatrix} \end{equation*}
+\begin{equation*} S = \begin{pmatrix} -2 & 2 \\ 1 & 1 \end{pmatrix}\end{equation*}
+\begin{equation*} S^{-1} = \frac{-1}{4}\begin{pmatrix} 1 & -2 \\ -1 & -2 \end{pmatrix}\end{equation*}
+\begin{equation*} S^{-1}AS = \begin{pmatrix} 3 & 0 \\ 0 & 2 \end{pmatrix} = D \end{equation*}
+Solve the system: \begin{equation*} Z' = DZ = \begin{pmatrix} 3 & 0 \\ 0 & 2 \end{pmatrix} \end{equation*}
+\begin{equation*} Z_1(t) = \gamma_1 e^{3t} \end{equation*}
+\begin{equation*} Z_2(t) = \gamma_2 e^{2t} \end{equation*}
+\\[2mm]
+\begin{equation*} \begin{pmatrix} \gamma \\[6pt] \phi  \end{pmatrix} = \begin{pmatrix} -2 & 2 \\[6pt] 1 & 1 \end{pmatrix} \begin{pmatrix} \gamma_1 e^{3t} \\[6pt] \gamma_2 e^{2t} \end{pmatrix} \end{equation*}
+\begin{equation*} \gamma(t) = -2 \gamma_1 e^{3t} + 2 \gamma_2 e^{2t} \end{equation*}
+\begin{equation*} \phi(t) = \gamma_1 e^{3t} \gamma_2 e^{3t} \end{equation*}
+we know the initial values: $\gamma(0) = 60$ and $\phi(0) = 60$ \newline
+\begin{equation*} -2\gamma_1 + 2\gamma_2 = 60\end{equation*}
+\begin{equation*} \gamma_1 + \gamma_2 = 60 \end{equation*} 
+solving, we get $\gamma_1 = 15$ and $\gamma_2 = 45$
+\begin{equation*} \gamma(t) = -30 e^{3t} + 90 e^{2t} \end{equation*}
+\begin{equation*} \phi(t) = 15 e^{3t} + 45 e^{2t} \end{equation*}
+\vfill
+Written by Prajeet Pushkar (TUM Bachelor, SS24), \href{https://github.com/PenguinPuff}{my github!} 
 \end{document}
