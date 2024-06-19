@@ -1,7 +1,6 @@
 just latex, will keep getting updated regularly
 
 - Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 
-- Introductory Statistics 
 - Modeling of Uncertainty 
 - Discrete Structures
 - Analysis für Informatik
