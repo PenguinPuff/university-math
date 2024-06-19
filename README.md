@@ -2,10 +2,10 @@ just latex-ing all the math courses sequentially, will keep getting updated regu
 
 - Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 
 - Modeling of Uncertainty 
-- Diskrete Structures
+- Discrete Structures
 - Analysis für Informatik
 - Linear Algebra für Informatik
-- Diskrete Probability Theory 
+- Discrete Probability Theory 
 - Algorithmic Math 
 - Numerical Programming
 
