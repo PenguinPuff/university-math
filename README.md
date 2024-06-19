@@ -1,12 +1,11 @@
-just latex, will keep getting updated regularly
+just latex-ing all the math courses sequentially, will keep getting updated regularly (if im not lazy)
 
 - Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 
 - Modeling of Uncertainty 
-- Discrete Structures
+- Diskrete Structures
 - Analysis für Informatik
 - Linear Algebra für Informatik
-- Discrete Probability Theory 
+- Diskrete Probability Theory 
 - Algorithmic Math 
-- Mathematics in Operations Research
-- Number Theory (Numerical Programming)
+- Numerical Programming
 
