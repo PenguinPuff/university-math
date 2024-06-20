@@ -6,6 +6,5 @@ just latex-ing all the math courses sequentially, will keep getting updated regu
 - Analysis für Informatik
 - Linear Algebra für Informatik
 - Discrete Probability Theory 
-- Algorithmic Math 
-- Numerical Programming
+
 
