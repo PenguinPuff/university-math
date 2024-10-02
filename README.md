@@ -1,6 +1,7 @@
 just latex-ing all the math (and related) courses sequentially, will keep getting updated regularly (if im not lazy)
 Mathematics Courses taken at the Technische Universität München:
-- Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 
+- Ordinary Differential Equations
+- Calculus III or Multivariable Calculus
 - Functional Programming
 - Discrete Structures
 - Analysis für Informatik
