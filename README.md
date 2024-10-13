@@ -8,7 +8,19 @@ Mathematics Courses taken at the Technische Universität München:
 - Introduction to Theoretical Computer Science and Information Theory
 - Linear Algebra für Informatik
 - Discrete Probability Theory
-- Data Engineering
 - Cryptography
-
+- Numerical Linear Algebra for Computational Science and Information
+- Introduction to Functional Analysis
+- Mathematical Models in Biology
+- Analysis 3
+- Algebra
+- Probability Theory
+- Algebra 2
+- Complex Analysis
+- Partial Differential Equations
+- Functional Analysis
+- Numerical Methods of Partial Differential Equations
+- Fourier Analysis
+- Function Theory
+- Functional Differential Equations
 
