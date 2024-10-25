@@ -15,11 +15,11 @@ Mathematics Courses (topics mentioned) taken at the Technische Universität Mün
 - Introduction to Functional Analysis
 - Mathematical Models in Biology
 - Analysis 3
-- Probability Theory and Uncertainty Quantification
 - Complex Analysis
 - Partial Differential Equations
 - Functional Analysis
 - Numerical Methods of Partial Differential Equations
-- Fourier Analysis
+- Probability Theory
+  
 
 
