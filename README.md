@@ -1,6 +1,7 @@
 just latex-ing all the math (and related) courses sequentially, will keep getting updated regularly (if im not lazy)
-Mathematics Courses taken at the Technische Universität München:
+Mathematics Courses (topics mentioned) taken at the Technische Universität München:
 - Ordinary Differential Equations
+- Statistical Learning and Inferential Statistics
 - Calculus III or Multivariable Calculus
 - Uncertainty Modeling in Engineering 
 - Functional Programming
@@ -21,5 +22,5 @@ Mathematics Courses taken at the Technische Universität München:
 - Functional Analysis
 - Numerical Methods of Partial Differential Equations
 - Fourier Analysis
-- Function Theory
+
 
