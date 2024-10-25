@@ -3,7 +3,6 @@ Mathematics Courses (topics mentioned) taken at the Technische Universität Mün
 - Ordinary Differential Equations
 - Statistical Learning and Inferential Statistics
 - Calculus III or Multivariable Calculus
-- Uncertainty Modeling in Engineering 
 - Functional Programming
 - Discrete Structures
 - Analysis für Informatik
