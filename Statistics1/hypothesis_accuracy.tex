@@ -1,0 +1,82 @@
+\documentclass{article}	
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{duckuments}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\graphicspath{C:\Users\panda\.vscode\tex\MathfuerEcoII\MSE}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{commath}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[LO]{\small{Linear Regression}}
+\fancyhead[RO]{\small{Hypothesis and Accuracy of a Model}}
+\fancyfoot{} % clear all footer fields
+\usepackage{amsmath}
+\begin{document}
+As discussed lightly in the introduction, standard errors can be used to compute the \textbf{confidence intervals}. A 95\% confidence interval is defined as a range of values such that with 95\% probability, the range will contain the true unknown value of the parameter. The range is defined in terms of lower and upper limits computed from the sample of data. 
+\\ A 95\% confidence interval has the following property: if we take repeated samples and construct the confidence interval for each sample, 95\% of the intervals will contain the true unknown value of the parameter. For linear regression, the 95\% confidence interval for $\beta_1$ approximately takes the form: \begin{equation*} \hat{\beta_1} \pm 2\cdot\text{SE}(\hat{\beta_1})\end{equation*}
+There is approximately 95\% chance that the interval 
+\begin{equation*} \left[\hat{\beta_1} - 2\cdot \text{SE}(\hat\beta_1), \hat{\beta_1} + 2\cdot \text{SE}(\hat\beta_1)  \right] \end{equation*}
+
+\vspace{5mm}
+Standard erros can also be used to perform \textbf{Hypothesis tests} on the coefficients. The most common hypothesis test involves testing the \textbf{null hypothesis} of
+\begin{equation*} H_0: \text{There is no relationship between $X$ and $Y$} \end{equation*}
+verus the \textbf{alternative hypothesis}
+\begin{equation*} H_a: \text{There is some relationship between $X$ and $Y$} \end{equation*}
+\\[2mm]
+Mathematically, our test is 
+\begin{equation*} H_0: \beta_1 = 0 \end{equation*}
+\begin{equation*} H_a: \beta_1 \neq 0 \end{equation*}
+since if $\beta_1 = 0$ then the model reduces to $Y = \beta_0 + \varepsilon$ and $X$ is not associated with $Y$. To test the null hypothesis, we need to deternube whether $\beta_1$, our estimate for $\beta_1$, is sufficiently far from zero that we can be confident that $\beta_1$ is non-zero. 
+\\ How far is enough? depends on the accuracy of $\hat{\beta_1}$  or depends on SE$(\hat{\beta_1})$ 
+\begin{enumerate}
+    \item For a small SE$(\hat{\beta_1})$, it may provide strong evidence that $\beta_1 \neq 0$ and hence we know that there is a relationship between $X$ and $Y$ 
+    \item For a large SE$(\hat{\beta_1})$, $\hat{\beta_1}$ must be large in absolute value in order for us to reject the null hypothesis. We compute a \textbf{t-statistic} given by 
+\end{enumerate}
+\begin{equation*} t = \frac{\hat{\beta_1} - 0}{\text{SE}(\hat{\beta_1})}  \end{equation*}
+t-statistic measure the number of standard deviations that $\hat{\beta_1}$ is away from 0. If there really is a no relationship between $X$ and $Y$, then it is expect that their is a t-distribution with $n-2$ degrees of freedom. 
+\\[4mm] \textbf{p-value} is the probability of observing any number equal to $|t|$ or larger in absolute value, assuming $\beta_1 = 0$. This probability is called the p-value. 
+\begin{enumerate}
+    \item small p-value indicates that there is an association between the predictor and the response. We \textit{reject the null hypothesis} and we can declare that a relationship exists between $X$ and $Y$ if the p-value is small enough.
+    \item large t-statistics are also large for large coefficients $\hat{\beta_0}$ and $\hat{\beta_1}$ are very large relative to their standard errors, si tge t-statistics are also large; the probability of seeing such values if $H_0$ is true are virtually zero. Hence $\beta_0 \neq 0$ and $\beta_1 \neq 0$ 
+\end{enumerate}
+\newpage
+\section*{Assessing the Accuracy of the Model}
+After rejecting the null hypothesis in favour of alternative hypothesis. The next task is to quantify the \textit{the extent to which the model fits the data}. \\ The quality of a linear regression fit is typically assessed using two related quantities:
+\begin{enumerate}
+    \item Residual Standard Error (RSE)
+    \item the $R^{2}$ statistic
+\end{enumerate}
+\subsection*{Residual Standard Error} 
+RSE is an estimate of the standard deviation of $\varepsilon$. It is the average amount that the response will deviate from the true regression line. 
+\begin{equation*} \text{RSE} = \sqrt{\frac{1}{n-2}\text{RSS}} = \sqrt{\frac{1}{n-2} \sum_{i=1}^{n} {(y_i - \hat{y_i})}^2 } \end{equation*}
+\begin{equation*} \text{RSS} = \sum_{i=1}^{n} {(y_i - \hat{y_i})}^2 \end{equation*}
+\\[2mm] 
+RSE is considered a measure of the \textit{lack of fit} of the model to the data.
+\begin{enumerate}
+    \item A small RSE indicates that the model fits the data very well or in other words $\hat{y_i}$ is very close to $y_i$ for one or more observations 
+    \item If $\hat{y_i}$ is very far from $y_i$ for one or more observations, then the RSE may be quite large indicating that the model doesn't fit the data well.
+\end{enumerate}
+\vspace{3mm}
+\subsection*{$R^{2}$ Statistic}
+$R^2$ statistic provides an alternative measure of fit. It is the proportion of variance and takes a value between 0 and 1 and is independent of the scale of $Y$. It is a measureof the linear relationship between $X$ and $Y$.
+\begin{equation*} R^2 = \frac{\text{TSS}-\text{RSS}}{\text{TSS}} = 1 - \frac{\text{RSS}}{\text{TSS}} \end{equation*}
+\begin{enumerate}
+    \item $\text{TSS} = \sum {(y_i - \overline{y})}^2$ is the total sum of squares and measures the total variance in the response $Y$. It can be considered as the amount of variability inherent in the response before the regression is performed.
+    \item RSS measures the amount of variability that is left unexplained after performing the regression. 
+    \item TSS $-$ RSS measures the amount of variability in the response that is explained by performing the regression. 
+    \item $R^2$ measures the proportion of the variability in the response $(Y)$ that is explained using $(X)$
+    \begin{enumerate}
+        \item $R^2$ statistic that is close to 1 indicates that a large proportion of the variability in the response that is explained by the regression
+        \item $R^2$ statistic that is close to 0 indicates that the regression does not explain much of the variability in the response that is explained by the regression
+    \end{enumerate}
+\end{enumerate}
+\vspace{2mm}
+$R^2$ statistic has an interpretational advantage over the RSE since it is a proportion. The definition of \textit{good} $R^2$ value depends upon the area of application, like in physics we're most likely to get get an extremely close value to 1 while it is a significant model if we get a value close to 0.1 in the fields of biology, psychology and marketing. \\
+$r =$ Cor$(X,Y)$ is also a measure of the linear relationship between $X$ and $Y$. 
+\begin{equation*} \text{Cor}(X,Y) = \frac{\sum_{i=1}^{n} (x_i - \overline{x})(y_i - \overline{y})}{\sqrt{\sum_{i=1}^{n} {(x_i - \overline{x})}^2} \sqrt{\sum_{i=1}^{n} {(y_i - \overline{y})}^2}}  \end{equation*}
+In a simple regression setting, $R^2$ statistic and the squared correlation $r^2$ are identical 
+
+\end{document}

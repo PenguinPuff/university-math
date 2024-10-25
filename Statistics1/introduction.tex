@@ -1,0 +1,73 @@
+\documentclass{article}	
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{duckuments}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\graphicspath{C:\Users\panda\.vscode\tex\MathfuerEcoII\MSE}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{commath}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[LO]{\small{Linear Regression}}
+\fancyhead[RO]{\small{Introduction}}
+\fancyfoot{} % clear all footer fields
+\usepackage{amsmath}
+\begin{document}
+Before getting into Linear Regression- ``True regression functions are never linear'' but it is still a useful tool for predicting a quantitative response.
+\\ Topics: Linear Regresion Model concepts and Least Squares Approach. 
+\\ Important questions that are important to address from a given data:
+\begin{enumerate}
+    \item \textbf{\textit{Is there a relationship between the variable and the response?   }}Determine whether the data providence of an association between the variable and the response.
+    \item \textbf{\textit{How strong is the relationship between the variable and the corresponding responses?    }} Strength of this relationship.
+    \item \textbf{\textit{Association of the response with the variable:  }} The need to separate out the individual contribution of each variable.  
+    \item \textbf{\textit{How large is this association?}}
+    \item \textbf{\textit{Predicting the future and the accuracy of the same}}
+    \item \textbf{\textit{Is the relationship linear?     }} If the relationship between the variable and the response is approximately a straight-line relationship then linear regression is an appropriate tool
+    \item Synergy effect (in marketing) or interaction effect (in statistics)
+\end{enumerate}
+\section*{Simple Linear Regression}
+For a quantitative response $Y$ on the basis of a single predictor variable $X$, we assume that there is approximately a linear relationship between $X$ and $Y$. We can mathematically write this relationship as:
+\begin{equation*} Y \approx \beta_0 + \beta_1 X \end{equation*} 
+\hspace*{55mm} $\beta_0 \rightarrow$ \textbf{intercept} of the linear model \\
+\hspace*{55mm} $\beta_1 \rightarrow$ \textbf{slope} of the linear model \\[6pt]
+They are known as the \textbf{model coefficients} or just \textbf{paraneters}. We will then use our training data and determine the \textit{estimates} of $\hat{\beta}_0$ and $\hat{\beta}_1$ for the model coefficients. 
+\begin{equation*} \tag{estimates} \hat{y} = \hat{\beta}_0 + \hat{\beta}_1 x \end{equation*} 
+where $\hat{y}$ indicates a prediction of Y on the basis of $X=x$
+\subsection*{Estimating the Coefficients} 
+$\beta_0$ and $\beta_1$ are unknown, we'll use our data to estimate the coefficients. Our data is:\\
+\begin{equation*} (x_1,y_1),(x_2,y_2),\dots,(x_n,y_n) \end{equation*} 
+Our goal is to find the estimates $\hat{\beta}_0$ and $\hat{\beta}_1$ such that the linear model fits the available data well that is to \\[2pt] say $y_i \approx \hat{\beta}_0 + \hat{\beta}_1 x_i$ for i = 1,2,$\dots$,n 
+\\ Our task is to measure the \textit{closeness}. The most common approach involves \textbf{minimizing the least squares criterion} 
+\\
+We define $e_i$ as the residual \begin{equation*} e_i = y_i - \hat{y}_1 \end{equation*}
+As evident, the residual is basically the difference between the observed i-th value and the i-th response value that is predicter by our linear model. We define the \textbf{residual sum of squares RSS} as 
+\begin{equation*} \text{RSS} = e_1^{2} + e_2^{2} + \cdots + e_n^{2} \end{equation*}
+The least squares approach chooses $\hat{\beta}_0$ and $\hat{\beta}_1$ to minimize the RSS so using some calculus, we obtain the following \textit{least squares coefficient estimates} for the linear regression:
+\begin{equation*} \hat{\beta}_1 = \frac{{\sum_{i=1}^{n}(x_i - \overline{x})}(y_i - \overline{y})}{{\sum_{i=1}^{n}{(x_i - \overline{x})}^{2}}}\end{equation*}
+\begin{equation*} \hat{\beta}_0 = \overline{y} - \hat{\beta} \hspace{1mm} \overline{x} \end{equation*}
+where $\overline{y} \equiv \frac{1}{n} \sum_{i=1}^{n} y_i$ and $\overline{x} \equiv \sum_{i=1}^{n} x_i$ are the sample means. 
+\vspace{4mm}
+\subsection*{Assessing the Accuracy of the Coefficient Estimates}
+Assuming the \textit{true} relationship between $X$ and $Y$ takes the form $Y = f(X) + \varepsilon$, here $\varepsilon$ is a \textbf{mean-random error term}. Approximating f as a linear function we have:\
+\begin{equation*} Y = \beta_0 + \beta_1 X + \varepsilon \end{equation*}
+here, $\beta_0$ is the intercept term- expected value of $Y$ when $X = 0$ and $\beta_1$ is the slope- the average increase in $Y$ associated with a one-unit increase in $X$ 
+\\[6mm]
+The analogy between linear regression and estimation of the mean of a random variable is an apt based on the concept of \textbf{bias}. If we use the sample mean $\hat{\mu}$ to estimate $\mu$, this estimate is \textit{unbiased} since $\hat{\mu} = \mu$ is expected by us. $\hat{\mu}$ might \textit{underestimate} or \textit{overestimate} the value of $\mu$ but if we could average a huge number of sets of observations, then this average would \textit{exactly} equal $\mu$. Hence, an \underline{unbiased estimator} does NOT systematically over- or under-estimate the true parameter. 
+\\ The same could be said for estimating the values of $\beta_0$ and $\beta_1$, if we could average the estimates obtained over a huge number of data sets, then the average of these estimates would be spot on! 
+\\[6mm]
+How far off will the estimate of $\hat{\mu}$ will be from $\mu$: \\
+\begin{equation*}\text{Var}{(\hat{\mu})} = \text{SE}{(\hat{\mu})}^{2} = \frac{\sigma^{2}}{n} \tag{Standard error}\end{equation*}
+The standard error tells us the average amount that this estimate of $\hat{\mu}$ differs from the actual value $\mu$ 
+For computing the standard errors associated with $\hat{\beta}_0$ and $\hat{\beta}_1$, 
+\begin{equation*} \text{SE}{(\hat{\beta_0})}^2 = \sigma^{2} \left[\frac{1}{n} + \frac{\overline{x}^2}{{\sum_{i=1}^{n}{(x_i - \overline{x})}^2}}\right] \end{equation*}
+\begin{equation*} \text{SE}{(\hat{\beta_1})}^2 = \frac{\sigma^{2}}{{\sum_{i=1}^{n}{(x_i - \overline{x})}^2}}\end{equation*}
+$\sigma^{2}$ is the variance of the noise or $\sigma^{2} = \text{Var}(\varepsilon)$. Assuming that the errors $\varepsilon_i$ for each observation have common variance $\sigma^{2}$ and are uncorrelated
+\\ In general $\sigma^{2}$ is not known and has to be estimated from the data. This estimate of $\sigma$ is known as the \textit{residual standard error} and is given by the formula \begin{equation*} \text{RSE} = \sqrt{\frac{\text{RSS}}{(n-2)}} \end{equation*}
+Standard errors can be used to compute confidence intervals. 
+\vfill
+\centering \textbf{***}
+
+
+\end{document}

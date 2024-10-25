@@ -1,0 +1,94 @@
+\documentclass{article}	
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{duckuments}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{commath}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[LO]{\small{Linear Regression}}
+\fancyhead[RO]{\small{Multiple Linear Regressions}}
+\fancyfoot{} % clear all footer fields
+\usepackage{amsmath}
+\begin{document}
+\section*{Multiple Linear Regressions}
+We often have more than one predictor. The reason we don't separate a model into n simple linear regressions because it is unclear how to make a single prediction given all the responses and variables. 
+Also, each of the regression equations ignores the other (n-1) variables in forming estimates for the regression coefficients. This can lead to very misleading estimates of the association between variables and the responses. 
+Instead of fitting separate linear regression model for each predictor, a better approach is to extend the simple linear equation regression model so that it can directly accommodate multiple predictors. The multiple linear regression model takes the form: 
+\begin{equation*} Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \cdots + \beta_p X_p + \varepsilon \end{equation*}
+where $X_j$ represents the $j$th predictor and $\beta_j$ quantifies the association between that variable and the response. $\beta_j$ is interpreted as the \textit{average effect} on Y of a one unit increase in $X_j$, holding all other predictors fixed. 
+\subsection*{Estimating the Regression Coefficients} 
+estimates:
+\begin{equation*} \hat{y} = \hat{\beta_0} + \hat{\beta_1} x_1 + \hat{\beta_2} x_2 + \cdots + \hat{\beta_p} x_p \end{equation*}
+We choose $\beta_0, \beta_1, \dots, \beta_p$ 
+\begin{equation*} \text{RSS} = \sum_{i=1}^{n} {(y_i - \hat{y_i})}^2 \end{equation*}
+The values that \textbf{minimize the RSS} are the \underline{multiple least squares regression coefficent estimates}
+\begin{enumerate}
+    \item Is at least one of the predictors $X_1, X_2, \dots, X_p$ useful in predicting the response?
+    \item Do all predictors help to explain $Y$, or is only a subset of the predictors useful.
+    \item How well does the model fit the data?
+    \item How accurate is our prediction??
+\end{enumerate}
+\vspace{4mm}
+\begin{enumerate}
+    \item \text{Relaionship between the Response and Predictors?} \textbf{Testing the null hypothesis} \\ \begin{equation*} H_0: \beta_1 = \beta_2 = \cdots = \beta_p = 0 \end{equation*}
+    versus the alternative \begin{equation*} H_a: \text{at least one } \beta_j \text{ is non-zero} \end{equation*}
+    This hypothesis test is performed by computing the $F$-\textit{statistic} 
+    \begin{equation*} F = \frac{(\text{TSS}-\text{RSS})/{p}}{\text{RSS}/(n-p-1)} \end{equation*}
+    TSS $= \sum {(y_i-\overline{y})}^2$ and RSS $= \sum {(y_i - \hat{y_i})}^2$  \\
+    \begin{equation*} E{\{\text{RSS}/(n-p-1)\}} = \sigma^2 \end{equation*}
+    and if $H_0$ is true, 
+    \begin{equation*} E{\{(\text{TSS}-\text{RSS})/p\}} = \sigma^2 \end{equation*}
+    $F$-statistic is expected to be close to 1. \\
+    if $H_a$ is true, then $E{\{(\text{TSS}-\text{RSS})/p\}} > \sigma^2$ and hence $F \gg 1$. 
+    Large $F$-statistic suggests that at least one of predictors are related to the responses. 
+    \\[3mm] For a large n, $F-\text{statistic} > 1$ might provide evidence against $H_0$
+    A larger $F$-statistic is needed to \textbf{reject} $H_0$ for a small n. 
+    \\
+    Null hypothesis test for a particular subset of $q$ of the coefficients are zero.
+    \begin{equation*} H_0: \beta_{p-q-1} = \beta_{p-q+2} = \cdots = \beta_p = 0 \end{equation*}
+    Next: fit a second modelthat uses all the variables \textit{except} those last $q$. 
+    \begin{equation*} F = \frac{(\text{RSS}_0 - \text{RSS})/q}{\text{RSS}/(n-p-1)} \end{equation*}
+    In this case, $t$-statistic and a $p$-value are both equivalent to the one from last model hence indicating \textit{partial effect} of adding that variable to the model 
+    \\[2mm] \text{NOTE:} Using individual $t$-statistics and associated $p$-values in order to decide whether or no there is any association between the variables and the response, there is avery high chance that we will incorrectly conclude that there is a relationship. $F$-statistic does not suffer from this problem because it adjusts for the number of predictors. Hence, if $H_0$ is \underline{true}, there is only a 5\% chance that the $F$-statistic will result in a $p$-value below 0.05, regardless of the number of predictors or the number of observations.
+    \\ When $p$ is large, \textbf{forward selection} is an approach used. \\
+    \item Deciding on \textbf{Important Variables}, after computing the $F$-statistic
+    \\ \textbf{Variable Selection:} The task of determining which predictors are associated with the response, in order to fit a single model involving only those predictors
+    \begin{enumerate}
+        \item[1.] \textbf{Forward Selection}. [Greedy Approach and might include redudant variables early on]
+        \\ $\bullet$ start with a \textbf{Null Model} (contains an intercept but no predictors) 
+        \\ $\bullet$ fit $p$ simple linear regressions 
+        \\ $\bullet$ add to the null model the variable that results in the lowest RSS for the new two-variable model
+        \\ $\bullet$ continue till some stopping rule is satisfied \\
+        \item[2.] \textbf{Backward Selection}. [Cannot be used for $p>n$]
+        \\ $\bullet$ start with all variables in the model
+        \\ $\bullet$ remove the variable with the largest $p$-value (variable that is the least statistically significat)
+        \\ $\bullet$ new (p-1) model, it's fit
+        \\ $\bullet$ again the variable with the largest $p$-value is removed. 
+        \\ $\bullet$ continue till some stopping rule is satisfied (some threshold $p$-value) \\
+        \item[3.] \textbf{Mixed Selection}. [Combination of forward and backward selection.]
+        \\ $\bullet$ start with no variables in the model
+        \\ $\bullet$ [forward selection] add the variable that provides the best fit 
+        \\ $\bullet$ continue adding variables one-by-one 
+        \\ $\bullet$ if at any point the $p$-value $> \text{threshold}$ for one of the variables \\ $\rightarrow$ remove that variable from the model
+        \\ $\bullet$ continue to peform these forward and backward steps until all variables in the model have a sufficiently low $p$-value and all the variables outside the model would have a large $p$-value if added to the model.
+    \\
+    \end{enumerate}
+    \item \textbf{Model Fit } RSE and $R^2$  
+    \begin{equation*} \text{RSE} = \sqrt{\frac{1}{(n-p-1)}\text{RSS}} \end{equation*}
+    \textit{synergy} or \textit{interaction} effect between predictors and responses. \\
+    \item \textbf{Predictions } after fitting the multiple regression model, it is straightforward to apply in order to predict the response Y on the basis of a set of values for the predictors $X_1, X_2, \dots, X_p$. However, there are \underline{three} sorts of uncertainty associated with this prediction.
+    \begin{enumerate}
+        \item[1.] The coefficients estimates $\hat{\beta_0}, \hat{\beta_1}, \dots, \hat{\beta_p}$ are estimates for $\beta_0, \beta_1, \dots, \beta_p$ \textit{Least squares plane} 
+        \begin{equation*} \hat{Y} = \hat{\beta_0} + \hat{\beta_1} X_1 + \cdots + \hat{\beta_p} X_p \end{equation*}
+        is an estimate for the \textit{true population regression plane}
+        \begin{equation*} f(X) = \beta_0 + \beta_1 X_1 + \cdots + \beta_p X_p \end{equation*} 
+        We can compute a confidence interval in order to determine how close $\hat{Y}$ will be to $f(X)$ \\
+        \item[2.] \textbf{Model Bias } there is an additional source of potentially reducible error. When we use a linear model, we are in fact estimating the best linear approximation to the total surface. This discrepancy is ignored and we pretend that the linear model was correct
+        $\smile$\\
+        \item[3.] The random error $\varepsilon$ makes it impossible to predict the response value perfectly since it is an \textit{irreducible error}. Prediction intervals- wider than confidence intervals because they incorporate both the error in the estimate for $f(X)$ (The reducible error) and the uncertainty as to how how much an individual point will differ from the population regression plane (the reducible error).
+    \end{enumerate}
+\end{enumerate}
+\end{document}
