@@ -10,16 +10,20 @@ Mathematics Courses (topics mentioned) taken at the Technische Universität Mün
 - Information Theory
 - Linear Algebra für Informatik
 - Discrete Probability Theory
-- Cryptography
+- Applied Discrete Optimization (Mathematical Operations Research)
+- Cryptography 
 - Numerical Linear Algebra for Computational Science
+- Discrete Optimization
 - Introduction to Functional Analysis
-- Mathematical Models in Biology
 - Analysis 3
 - Complex Analysis
+- Complex Analysis 2
+- Functional Analysis
 - Partial Differential Equations
 - Numerical Methods of Partial Differential Equations
-- Functional Analysis
 - Probability Theory
+- Mathematical Models in Biology
+
   
 
 
