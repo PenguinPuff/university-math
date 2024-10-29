@@ -2,7 +2,7 @@ just latex-ing all the math (and related) courses sequentially, will keep gettin
 Mathematics Courses (topics mentioned) taken at the Technische Universität München:
 - Ordinary Differential Equations
 - Statistical Learning and Inferential Statistics
-- Calculus II and III 
+- Calculus III 
 - Lambda Calculus
 - Discrete Structures
 - Analysis für Informatik
