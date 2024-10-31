@@ -12,7 +12,7 @@ Mathematics Courses (topics mentioned) taken at the Technische Universität Mün
 - Applied Discrete Optimization (Mathematical Operations Research)
 - Cryptography 
 - Numerical Linear Algebra 
-- Analysis 3
+- Real Analysis 
 - Complex Analysis
 - Introduction to Functional Analysis
 
