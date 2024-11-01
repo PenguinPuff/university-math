@@ -8,6 +8,4 @@
 - Logistic regression (classification)
 - Inference
 
-<p align = "center"> <img class = "img" src="https://github.com/PenguinPuff/statistical-learning/assets/142169851/31ebda48-234d-45b5-b722-264a04e6d71d"> </p> 
-
 
