@@ -8,7 +8,7 @@ Mathematics Courses (BSc.) (topics mentioned) taken at the Technische Universit�
 - Analysis für Informatik
 - Linear Algebra für Informatik
 - Discrete Probability Theory
-- Applied Discrete Optimization (Mathematical Operations Research)
+- Mathematical Operations Research 
 - Modeling and Simulation with Ordinary Differential Equations
 - Cryptography 
 - Numerical Linear Algebra 
