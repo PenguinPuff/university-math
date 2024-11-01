@@ -1,8 +1,7 @@
 just latex-ing all the math (and related) courses sequentially, will keep getting updated regularly (if im not lazy)
-Mathematics Courses (topics mentioned) taken at the Technische Universität München:
-- Statistical Learning and Inferential Statistics
+Mathematics Courses (BSc.) (topics mentioned) taken at the Technische Universität München:
 - Calculus III
-- Ordinary Differential Equations
+- Statistical Learning and Inferential Statistics
 - Discrete Structures
 - Introduction to Theoretical Computer Science
 - Information Theory
@@ -10,11 +9,12 @@ Mathematics Courses (topics mentioned) taken at the Technische Universität Mün
 - Linear Algebra für Informatik
 - Discrete Probability Theory
 - Applied Discrete Optimization (Mathematical Operations Research)
+- Modeling and Simulation with Ordinary Differential Equations
 - Cryptography 
 - Numerical Linear Algebra 
 - Real Analysis 
 - Complex Analysis
-- Introduction to Functional Analysis
+- Numerical Treatment of Partial Differential Equations
 
   
 
