@@ -112,16 +112,16 @@ fill=blue!30]
         \node (in1) [io, below left=2cm, xshift=-3cm] {Supervised Learning};
         \node (in2) [io2, below of=start] {Unsupervised Learning};
         \node (in3) [io3, below right=2cm, xshift=3cm] {Reinforcement Learning};
-        \node (in4) [io4, below of=in1] {Classification};
-        \node (in5) [io5, below of=in2, xshift=-2.5cm] {Regression};
-        \node (in6) [io6, right of=in5, xshift=2.5cm] {Clustering};
+        \node (in4) [io4, below of=in1, xshift=-3cm] {Classification};
+        \node (in5) [io5, below of=in2, xshift=-4.5cm] {Regression};
+        \node (in6) [io6, right of=in5, xshift=2cm] {Clustering};
     
         % Connections
         \draw[-] (start) -- (in1);
         \draw[-] (start) -- (in2);
         \draw[-] (start) -- (in3);
         \draw[-] (in1) -- (in4);
-        \draw[-] (in2) -- (in5);
+        \draw[-] (in1) -- (in5);
         \draw[-] (in2) -- (in6);
     
     \end{tikzpicture}
