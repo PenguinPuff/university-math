@@ -1,20 +1,24 @@
-just latex-ing all the math (and related) courses sequentially, will keep getting updated regularly (if im not lazy)
-Mathematics Courses (BSc.) (topics mentioned) taken at the Technische Universität München:
-- Calculus III
-- Statistical Learning and Inferential Statistics
-- Discrete Structures
-- Introduction to Theoretical Computer Science
-- Information Theory
-- Analysis für Informatik
-- Linear Algebra für Informatik
-- Discrete Probability Theory
-- Mathematical Operations Research 
-- Modeling and Simulation with Ordinary Differential Equations
-- Cryptography 
-- Numerical Linear Algebra 
-- Real Analysis 
-- Complex Analysis
-- Numerical Treatment of Partial Differential Equations
-
-  
-
+Math Notes from courses taken at TUM:
+1. Mathematics in Science and Engineering 1
+2. Mathematics in Science and Engineering 2
+3. Statistics
+4. Discrete Structures
+5. Analysis for Computer Science
+6. Modeling and Simulations with Ordinary Differential Equations
+7. Ordinary Differential Equations
+8. Linear Algebra for Computer Science
+9. Discrete Probability Theory
+10. Numerical Treatment of Partial Differential Equations
+11. Numerical Linear Algebra
+12. Analysis 1
+13. Analysis 2
+14. Analysis 3
+15. Complex Analysis
+16. Linear Algebra 1
+17. Linear Algebra 2
+18. Discrete Mathematics
+19. Introduction to Optimization
+20. Introduction to Probability and Statistics
+21. Introduction to Programming
+22. Algebra 1
+23. 
