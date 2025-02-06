@@ -22,3 +22,10 @@ Math Notes from courses taken at TUM:
 21. Introduction to Programming
 22. Algebra 1
 23. 
+
+Operations Research notes from courses taken at TUM: 
+1. Operations Research
+2. Modeling and Simulations in Operations Management
+3. Machine Learning for Business Analytics
+4. Applied Discrete Optimization
+5. 
