@@ -40,3 +40,14 @@
 
 ## Semester 6
 1. Funktionentheorie
+
+### Mathematik kurse im Bereich TUM-BWL BSc.
+1. Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 1
+2. Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 2
+3. Introduction to Data Science and Statistical Thinking
+
+### Operations Research kurse
+1. Operations Research and Decision Analysis
+2. Machine Learning for Business Analytics
+3. Modeling, Optimization and Simulations in Operations Management
+4. Applied Discrete Optimization
