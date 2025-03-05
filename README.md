@@ -8,7 +8,7 @@
 
 ## Semester 2
 1. Analysis 2
-2. Lineare Algebra
+2. Lineare Algebra 2
 3. Diskrete Mathematik
 4. Algebra
 5. Topology
