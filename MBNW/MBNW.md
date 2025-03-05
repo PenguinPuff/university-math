@@ -1,0 +1,3 @@
+- Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 1 [MA9711]
+- Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 2 [MA9714]
+- Introduction to Data Science and Statistical Thinking [MA9712]
