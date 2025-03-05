@@ -47,7 +47,7 @@
 3. Introduction to Data Science and Statistical Thinking
 
 ### [Operations Research kurse](https://www.ot.mgt.tum.de/ot/education/courses/)
-1. Operations Research and Decision Analysis [[MGT001374]](https://campus.tum.de/tumonline/WBMODHB.wbShowMHBReadOnly?pKnotenNr=3320492)
-2. Machine Learning for Business Analytics [[MGT001375]](https://www.ot.mgt.tum.de/osm/education/courses/machine-learning-for-business-applications-wise/)
-3. Modeling, Optimization and Simulations in Operations Management [[WI001088]](https://campus.tum.de/tumonline/WBMODHB.wbShowMHBReadOnly?pKnotenNr=1019226)
-4. Applied Discrete Optimization [[WI000819]](https://campus.tum.de/tumonline/WBMODHB.wbShowMHBReadOnly?pKnotenNr=584608)
+1. Operations Research and Decision Analysis [MGT001374](https://campus.tum.de/tumonline/WBMODHB.wbShowMHBReadOnly?pKnotenNr=3320492)
+2. Machine Learning for Business Analytics [MGT001375](https://www.ot.mgt.tum.de/osm/education/courses/machine-learning-for-business-applications-wise/)
+3. Modeling, Optimization and Simulations in Operations Management [WI001088](https://campus.tum.de/tumonline/WBMODHB.wbShowMHBReadOnly?pKnotenNr=1019226)
+4. Applied Discrete Optimization [WI000819](https://campus.tum.de/tumonline/WBMODHB.wbShowMHBReadOnly?pKnotenNr=584608)
