@@ -42,12 +42,12 @@
 1. Funktionentheorie
 
 ### Mathematik [kurse](MBNW) im Bereich TUM-BWL BSc.
-1. Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 1 [[MA9711](https://campus.tum.de/tumonline/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/950763346?$ctx=lang=de&$scrollTo=toc_overview)]
-2. Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 2 [[MA9714](https://campus.tum.de/tumonline/wbModHb.wbShowMHBReadOnly?pKnotenNr=477942)]
-3. Introduction to Data Science and Statistical Thinking [[CIT5130002](https://campus.tum.de/tumonline/pl/ui/$ctx/WBMODHB.wbShowMHBReadOnly?pKnotenNr=3305433)]
+1. Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 1 
+2. Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 2 
+3. Introduction to Data Science and Statistical Thinking 
 
 ### Operations Research [kurse](OR)
-1. Operations Research and Decision Analysis [[MGT001374](https://campus.tum.de/tumonline/WBMODHB.wbShowMHBReadOnly?pKnotenNr=3320492)]
-2. Machine Learning for Business Analytics [[MGT001375](https://www.ot.mgt.tum.de/osm/education/courses/machine-learning-for-business-applications-wise/)]
-3. Modeling, Optimization and Simulations in Operations Management [[WI001088](https://campus.tum.de/tumonline/WBMODHB.wbShowMHBReadOnly?pKnotenNr=1019226)]
-4. Applied Discrete Optimization [[WI000819](https://campus.tum.de/tumonline/WBMODHB.wbShowMHBReadOnly?pKnotenNr=584608)]
+1. Operations Research and Decision Analysis 
+2. Machine Learning for Business Analytics 
+3. Modeling, Optimization and Simulations in Operations Management
+4. Applied Discrete Optimization
