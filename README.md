@@ -26,7 +26,7 @@
 1. Analysis für Informatik
 
 ## Semester 4
-1. Einführung in die Optimmierung
+1. Einführung in die Optimierung
 
 ### Mathematik kurse im Bereich Informatik BSc.
 1. Numerisches Programmieren
