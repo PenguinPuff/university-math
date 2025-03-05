@@ -41,7 +41,7 @@
 ## Semester 6
 1. Funktionentheorie
 
-### Mathematik kurse im Bereich TUM-BWL BSc.
+### Mathematik [kurse](MBNW) im Bereich TUM-BWL BSc.
 1. Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 1
 2. Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 2
 3. Introduction to Data Science and Statistical Thinking
