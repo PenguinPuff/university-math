@@ -4,13 +4,13 @@
 3. Discrete optimization problems and model formulations
 4. Computational complexity
 5. Basic exact solution methods:
-a. Branch-and-Bound methods
-b. Cutting-Plane methods
+- Branch-and-Bound methods
+-  Cutting-Plane methods
 6. Advanced exact solution methods:
-a. Strong Valid Inequalities
-b. Branch-and-Cut
-c. Dantzig-Wolfe Decomposition
-d. Branch-and-Price / Branch-Price-Cut
-e. Lagrangian Relaxation
-f. Bender’s Decomposition
+- Strong Valid Inequalities
+- Branch-and-Cut
+- Dantzig-Wolfe Decomposition
+- Branch-and-Price / Branch-Price-Cut
+- Lagrangian Relaxation
+- Bender’s Decomposition
 7. Heuristic / Metaheuristic methods
