@@ -4,7 +4,6 @@
 
 ### Mathematik kurse im Bereich Informatik BSc.
 1. Diskrete Struckturen
-2. Applied Regression
 
 ## Semester 2
 1. Analysis 2
@@ -32,7 +31,6 @@
 1. Numerisches Programmieren
 2. Einführung in die Theoretische Informatik 
 3. Diskrete Wahrscheinlichkeitstheorie
-4. Modellbildung und Simulation (Fokus Analysis)
 
 ## Semester 5
 1. Algebraic Topology
