@@ -9,9 +9,8 @@
 1. Analysis 2
 2. Lineare Algebra 2
 3. Diskrete Mathematik
-4. Algebra
-5. Topology
-6. Einführung in die Optimierung
+4. Topology
+5. Einführung in die Optimierung
 
 ### Mathematik kurse im Bereich Informatik BSc.
 1. Lineare Algebra für Informatik
@@ -26,6 +25,7 @@
 1. Analysis für Informatik
 
 ## Semester 4
+1. Algebra
 
 ### Mathematik kurse im Bereich Informatik BSc.
 1. Numerisches Programmieren
