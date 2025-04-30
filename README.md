@@ -26,7 +26,6 @@
 ### Mathematik kurse im Bereich Informatik BSc.
 1. Analysis für Informatik
 2. Numerische Programmierung
-3. Computational Social Choice
 
 ## Semester 4
 1. Algebra
@@ -48,7 +47,7 @@
 2. Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 2 
 3. Introduction to Data Science and Statistical Thinking 
 
-### Operations Research [kurse](OR)
+### Operations Research, Statistics and Econometrics [kurse](TUM-BWL)
 1. Operations Research and Decision Analysis (Chair of Operations Management)
 2. Machine Learning for Business Analytics (Professorship of Business Analytics and Intelligent Systems)
 3. Modeling, Optimization and Simulations in Operations Management
