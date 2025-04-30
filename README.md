@@ -4,6 +4,7 @@
 
 ### Mathematik kurse im Bereich Informatik BSc.
 1. Diskrete Struckturen
+2. Applied Regression
 
 ## Semester 2
 1. Analysis 2
@@ -51,3 +52,4 @@
 2. Machine Learning for Business Analytics 
 3. Modeling, Optimization and Simulations in Operations Management
 4. Applied Discrete Optimization
+5. Applied Econometrics
