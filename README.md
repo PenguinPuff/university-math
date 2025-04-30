@@ -21,8 +21,7 @@
 2. Numerik
 3. Einführung in die Wahrscheinlichkeitstheorie und Statistik
 4. Einführung in die Programmierung
-5. Numerik der Differentialgleichungen
-6. Discrete Optimization
+5. Discrete Optimization
 
 ### Mathematik kurse im Bereich Informatik BSc.
 1. Analysis für Informatik
