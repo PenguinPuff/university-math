@@ -25,6 +25,8 @@
 
 ### Mathematik kurse im Bereich Informatik BSc.
 1. Analysis für Informatik
+2. Numerische Programmierung
+3. Computational Social Choice
 
 ## Semester 4
 1. Algebra
@@ -32,8 +34,8 @@
 ### Mathematik kurse im Bereich Informatik BSc.
 1. Einführung in die Theoretische Informatik 
 2. Diskrete Wahrscheinlichkeitstheorie
-3. Numerisches Programmierung
-4. Modellbildung und Simulation
+3. Modellbildung und Simulation (Fokus Analysis)
+4. Algorithmic Game Theory
 
 ## Semester 5
 1. Algebraic Topology
@@ -47,8 +49,9 @@
 3. Introduction to Data Science and Statistical Thinking 
 
 ### Operations Research [kurse](OR)
-1. Operations Research and Decision Analysis 
-2. Machine Learning for Business Analytics 
+1. Operations Research and Decision Analysis (Chair of Operations Management)
+2. Machine Learning for Business Analytics (Professorship of Business Analytics and Intelligent Systems)
 3. Modeling, Optimization and Simulations in Operations Management
-4. Applied Discrete Optimization
-5. Applied Econometrics
+4. Applied Discrete Optimization (Chair of Operations Research)
+5. Applied Econometrics (Professorship of Applied Econometrics)
+6. Operations Research (Chair of Decision Sciences & Systems)
