@@ -18,7 +18,7 @@
 4. Discrete Optimization
 
 ## Semester 4
-1. Geometrie *Geometry*
+1. Geometrie (*Geometry*)
 2. Einführung in die Theoretische Informatik (*Introduction to Theoretical Computer Science*)
 
 ## Semester 5
@@ -30,7 +30,13 @@
 1. Funktionentheorie (*Complex Analysis*)
 2. Algebraic Geometry
 
-### Mathematik [kurse](MBNW) im Bereich TUM-BWL BSc.
+### Mathematik kurse im Bereich TUM-Informatik
+1. Diskrete Strukturen (*Discrete Structures*)
+2. Diskrete Wahrscheinlichkeitstheorie (*Discrete Probability Theory*)
+3. Numerische Programmieren (*Numerical Programming*)
+4. Modellbildung und Simulation (*Modeling and Simulation*)
+
+### Mathematik [kurse](MBNW) im Bereich TUM-BWL
 1. Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 1 (*Mathematics in Natural and Economic Sciences 1*)
 2. Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 2 (*Mathematics in Natural and Economic Sciences 2*)
 
