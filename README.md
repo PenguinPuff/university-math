@@ -27,7 +27,7 @@
 3. Functional Analysis
 
 ## Semester 6
-1. Funktionentheorie
+1. Funktionentheorie (*Complex Analysis*)
 2. Algebraic Geometry
 
 ### Mathematik [kurse](MBNW) im Bereich TUM-BWL BSc.
