@@ -46,5 +46,4 @@
 3. Machine Learning for Business Analytics (Professorship of Business Analytics and Intelligent Systems)
 4. Modeling, Optimization and Simulations in Operations Management
 5. Applied Discrete Optimization (Chair of Operations Research)
-6. Applied Econometrics (Professorship of Applied Econometrics)
-7. Operations Research (Chair of Decision Sciences & Systems)
+6. Operations Research (Chair of Decision Sciences & Systems)
