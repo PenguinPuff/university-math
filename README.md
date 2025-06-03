@@ -26,11 +26,14 @@
 
 ## Semester 6
 
-## andere Bereiche (*other areas*)
+
+##
 ### Mathematik kurse im Bereich der TUM-Informatik
 1. Diskrete Strukturen (*Discrete Structures*)
 2. Diskrete Wahrscheinlichkeitstheorie (*Discrete Probability Theory*)
 3. Einführung in die Theoretische Informatik (*Introduction to Theoretical Computer Science*)
+4. Computational Social Choice
+5. Algorithmic Game Theory
 
 ### Mathematik [kurse](MBNW) im Bereich der TUM-BWL
 1. Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 1 (*Mathematics in Natural and Economic Sciences 1*)
