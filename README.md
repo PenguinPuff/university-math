@@ -44,5 +44,6 @@
 1. Operations Research and Decision Analysis (Chair of Operations Management)
 3. Machine Learning for Business Analytics (Professorship of Business Analytics and Intelligent Systems)
 4. Modeling, Optimization and Simulations in Operations Management (Chair of Operations Management, Chair of Production and Supply Chain Management)
-5. Applied Discrete Optimization (Chair of Operations Research, Department of Mathematics and School of Management)
-6. Operations Research (Chair of Decision Sciences & Systems, Department of Computer Science)
+5. Applied Discrete Optimization (Chair of Operations Research, School of Management)
+6. Graph Theory (Chair of Operations Research, Department of Mathematics)
+7. Operations Research (Chair of Decision Sciences & Systems, Department of Computer Science)
