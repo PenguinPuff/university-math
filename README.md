@@ -28,12 +28,15 @@
 
 
 ##
-### Mathematik kurse im Bereich der TUM-Informatik
+### Mathematik und Angewandte Mathematik kurse im Bereich der TUM-Informatik
 1. Diskrete Strukturen (*Discrete Structures*)
 2. Diskrete Wahrscheinlichkeitstheorie (*Discrete Probability Theory*)
 3. Einführung in die Theoretische Informatik (*Introduction to Theoretical Computer Science*)
 4. Computational Social Choice
 5. Algorithmic Game Theory
+
+### Angewandte Mathematik kurse im Bereich der TUM-Elektrotechnik
+1. Control Theory
 
 ### Mathematik [kurse](MBNW) im Bereich der TUM-BWL
 1. Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 1 (*Mathematics in Natural and Economic Sciences 1*)
@@ -45,6 +48,6 @@
 3. Machine Learning for Business Analytics (Professorship of Business Analytics and Intelligent Systems)
 4. Modeling and Optimization in Operations Management (Chair of Operations Management)
 5. Simulations in Operations Management (Chair of Production and Supply Chain Management)
-6. Applied Discrete Optimization (Chair of Operations Research, School of Management)
-7. Graph Theory (Chair of Operations Research, Department of Mathematics)
+6. Applied Discrete Optimization (Operations Research Group, TUM School of Management and TUM School of Computation, Information & Technology)
+7. Graph Theory (Chair of Operations Research, TUM School of Computation, Information & Technology)
 8. Operations Research (Chair of Decision Sciences & Systems, Department of Computer Science)
