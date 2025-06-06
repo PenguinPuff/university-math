@@ -16,7 +16,7 @@
 1. Analysis 3
 2. Numerik (*Numerical Analysis*)
 3. Einführung in die Wahrscheinlichkeitstheorie und Statistik (*Introduction to Probability Theory and Statistics*)
-4. Algebraic Topology andere Bereiche
+4. Algebraic Topology
 5. Discrete Optimization
 
 ## Semester 4
