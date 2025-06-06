@@ -1,4 +1,4 @@
-# MA9712 
+# Introduction to Data Science and Statistical Thinking 
 - Programming in R
 - Basic Probability Theory
 - Statistical Learning (Linear and Logistic Regression)
