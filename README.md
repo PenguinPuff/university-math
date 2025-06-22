@@ -43,7 +43,7 @@
 2. Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 2 (*Mathematics in Natural and Economic Sciences 2*)
 3. Introduction to Data Science and Statistical Thinking 
 
-### Operations Research, Analytics, Production and Logistics & Supply Chain Management [kurse](OR)
+### Operations Research, Business Analytics and Operations & Supply Chain Management [kurse](OR)
 1. Operations Research and Decision Analysis (Chair of Operations Management)
 3. Machine Learning for Business Analytics (Professorship of Business Analytics and Intelligent Systems)
 4. Modeling and Optimization in Operations Management (Chair of Operations Management)
