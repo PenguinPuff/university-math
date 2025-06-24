@@ -1,3 +1,4 @@
+
 import time
 import pandas as pd
 import networkx as nx
@@ -5,6 +6,7 @@ import matplotlib.pyplot as plt
 from gurobipy import Model, GRB, quicksum
 
 # ---------- Dataset ----------
+
 pairs = [
     {"PairID": 1, "P_BT": "A", "P_PRA": 32, "P_HLA": "A1-B8-DR3", "P_CMV": "No", "P_Wt": 60, "P_Age": 45, "D_BT": "B", "D_HLA": "A2-B7-DR1", "D_CMV": "Yes", "D_Wt": 65, "D_Age": 42},
     {"PairID": 2, "P_BT": "B", "P_PRA": 77, "P_HLA": "A2-B15-DR4", "P_CMV": "Yes", "P_Wt": 55, "P_Age": 50, "D_BT": "A", "D_HLA": "A1-B8-DR3", "D_CMV": "No", "D_Wt": 65, "D_Age": 35},
@@ -128,108 +130,41 @@ bt_compat = {
 }
 
 def hla_mismatch(hla1, hla2):
-    """
-    Calculate the HLA mismatch score between two HLA strings.
-
-    The HLA strings are expected to be in the format like "A1-B8-DR3",
-    where the components are separated by dashes.
-
-    Parameters:
-    -----------
-    hla1 : str
-        HLA string for the first subject (e.g., donor).
-    hla2 : str
-        HLA string for the second subject (e.g., patient).
-
-    Returns:
-    --------
-    int
-        The number of mismatched HLA components, computed as the size
-        of the symmetric difference between the sets of components.
-    """
     return len(set(hla1.split("-")).symmetric_difference(set(hla2.split("-"))))
 
 def is_compatible(donor, patient):
-    """
-    Determine if a donor is compatible with a patient based on
-    blood type, PRA level, CMV status, weight, and HLA mismatch.
-
-    Compatibility rules:
-    - Patient's blood type must be compatible with donor's blood type.
-    - Patient's PRA (panel reactive antibody) must be <= 80.
-    - Donor with positive CMV (Cytomegalovirus) cannot donate to CMV-negative patient.
-    - Donor's weight must be >= patient's weight.
-    - HLA mismatch score must be 3 or less.
-
-    Parameters:
-    -----------
-    donor : dict
-        Dictionary containing donor attributes with keys:
-        'D_BT', 'D_HLA', 'D_CMV', 'D_Wt', etc.
-    patient : dict
-        Dictionary containing patient attributes with keys:
-        'P_BT', 'P_PRA', 'P_HLA', 'P_CMV', 'P_Wt', etc.
-
-    Returns:
-    --------
-    bool
-        True if donor is compatible with patient, False otherwise.
-    """
-    # TODO
+    if patient['P_BT'] not in bt_compat[donor['D_BT']]:
+        return False
+    if patient['P_PRA'] > 80:
+        return False
+    if donor['D_CMV'] == 'Yes' and patient['P_CMV'] == 'No':
+        return False
+    if donor['D_Wt'] < patient['P_Wt']:
+        return False
+    if hla_mismatch(donor['D_HLA'], patient['P_HLA']) > 3:
+        return False
     return True
 
 # ---------- Build Graph ----------
-def build_graph(df_pairs, df_donors=pd.DataFrame(), pruning= True):
-    """
-    Build a directed compatibility graph from patient-donor pairs and
-    optionally altruistic donors.
-
-    Nodes represent patient-donor pairs and altruistic donors.
-    Directed edges represent compatibility from a donor to a patient.
-
-    Parameters:
-    -----------
-    df_pairs : pandas.DataFrame
-        DataFrame containing patient-donor pairs with at least columns:
-        'PairID', donor and patient attributes.
-    df_donors : pandas.DataFrame, optional
-        DataFrame containing altruistic donors with donor attributes
-        (default is an empty DataFrame).
-    pruning : bool, optional
-        Whether to prune the graph by removing incompatible nodes
-        (default is True).
-
-    Returns:
-    --------
-    networkx.DiGraph
-        A directed graph with nodes as pairs/donors and edges indicating
-        donor-to-patient compatibility.
-    """
+def build_graph(df_pairs, df_donors=pd.DataFrame(), pruning=True):
     graph = nx.DiGraph()
-    # Add a node for each patient-donor pair
+
     for idx in df_pairs['PairID']:
         graph.add_node(idx)
 
-    compatible_edges = []
-    # Add edges between patient-donor pairs
     for donor in df_pairs.itertuples():
         for patient in df_pairs.itertuples():
             if donor.PairID == patient.PairID:
                 continue
             if is_compatible(donor._asdict(), patient._asdict()):
-                compatible_edges.append((donor.PairID, patient.PairID))
                 graph.add_edge(donor.PairID, patient.PairID)
 
     if not df_donors.empty:
-        # Add nodes for altruistic donors to the graph
         for idx in df_donors['DonorID']:
             graph.add_node(idx)
-
-        # Add edges from altruistic donors to compatible patients
         for donor in df_donors.itertuples():
             for patient in df_pairs.itertuples():
                 if is_compatible(donor._asdict(), patient._asdict()):
-                    compatible_edges.append((donor.DonorID, patient.PairID))
                     graph.add_edge(donor.DonorID, patient.PairID)
 
     if pruning:
@@ -238,193 +173,107 @@ def build_graph(df_pairs, df_donors=pd.DataFrame(), pruning= True):
     return graph
 
 def prune_nodes(graph: nx.DiGraph, df_donors=pd.DataFrame()):
-    """
-    Recursively remove nodes from the graph that have either zero in-degree
-    or zero out-degree, except:
-      - Altruistic Donors that have outgoing edges are preserved.
-      - Nodes reachable from altruistic donors are preserved.
+    changed = True
+    donor_ids = set(df_donors['DonorID']) if not df_donors.empty else set()
 
-    This pruning aims to remove isolated or dead-end nodes, improving
-    the structure of the compatibility graph.
+    while changed:
+        changed = False
+        to_remove = []
 
-    Parameters:
-    -----------
-    graph : networkx.DiGraph
-        The directed compatibility graph to prune.
-    df_donors : pandas.DataFrame, optional
-        DataFrame containing altruistic donors with donor attributes
-        (default is an empty DataFrame).
+        for node in list(graph.nodes):
+            if node in donor_ids:
+                continue
+            if graph.in_degree(node) == 0 or graph.out_degree(node) == 0:
+                to_remove.append(node)
 
-    Returns:
-    --------
-    None
-        The graph is modified in-place.
-    """
-    # TODO
+        if to_remove:
+            graph.remove_nodes_from(to_remove)
+            changed = True
 
 def plot_graph(graph: nx.DiGraph, highlight_edges=None):
-    """
-    Visualize the donor-patient compatibility graph using matplotlib.
-
-    Nodes are shown with labels, and edges represent compatibility.
-
-    Parameters:
-    -----------
-    graph : networkx.DiGraph
-        The compatibility graph to visualize.
-    highlight_edges: list
-        The list of edges to be highlighted.
-    Returns:
-    --------
-    None
-    """
     plt.figure(figsize=(10, 7))
     pos = nx.kamada_kawai_layout(graph)
-
-    # Draw all nodes
     nx.draw_networkx_nodes(graph, pos, node_color='lightgreen', node_size=500)
     nx.draw_networkx_labels(graph, pos)
-
-    # Separate edges into highlighted and normal
     highlight_edges = set(highlight_edges) if highlight_edges else set()
     all_edges = set(graph.edges)
     normal_edges = all_edges - highlight_edges
-
-    # Draw normal edges in black
     nx.draw_networkx_edges(graph, pos, edgelist=list(normal_edges), edge_color='black', arrows=True, arrowsize=15)
-
-    # Draw highlighted edges in red
     if highlight_edges:
         nx.draw_networkx_edges(graph, pos, edgelist=list(highlight_edges), edge_color='red', arrows=True, arrowsize=15, width=2)
-
     plt.title("Donor → Patient Compatibility Graph")
     plt.axis('off')
     plt.show()
 
-# -------------------------------------
 def recursive_algorithm(graph: nx.DiGraph, df_pairs, df_donors, max_cycle):
-    """
-    Solves a kidney exchange optimization problem using integer programming.
-
-    The function models and solves a directed kidney exchange graph, selecting the
-    optimal set of edges (i.e., transplants) that maximize the number of transplants
-    while obeying flow constraints and avoiding long cycles.
-
-    Parameters:
-    -----------
-    graph : nx.DiGraph
-        A directed graph where nodes represent donor-patient pairs or altruistic donors,
-        and edges represent feasible transplantations.
-
-    df_pairs : pandas.DataFrame
-        DataFrame containing paired donor-patient information.
-        Must contain a 'PairID' column matching nodes in the graph.
-
-    df_donors : pandas.DataFrame
-        DataFrame containing altruistic donor information.
-        Must contain a 'DonorID' column matching nodes in the graph.
-
-    max_cycle : int
-        The maximum allowed cycle length in the solution. Longer cycles
-        are iteratively removed by adding constraints.
-
-    Returns:
-    --------
-    selected_edges : list of tuple
-        A list of directed edges (tuples) representing the selected transplant paths.
-        If the model is infeasible or no optimal solution is found, returns `None`.
-
-    Notes:
-    ------
-    - Uses Gurobi to solve a mixed-integer program.
-    - Flow variables (`f_in`, `f_out`) are used to ensure logical consistency in edge selection.
-    - Constraints:
-        - Each node has balanced in/out flow.
-        - Pair nodes may have one incoming and one outgoing edge.
-        - Donor nodes may have at most one outgoing edge.
-    - Iteratively detects and removes cycles of length ≥ `max_cycle`.
-    """
     all_nodes = set(graph.nodes)
-    
-    # Filter df_pairs and df_donors to match the current graph
     df_pairs = df_pairs[df_pairs['PairID'].isin(all_nodes)].copy()
     df_donors = df_donors[df_donors['DonorID'].isin(all_nodes)].copy()
-
     pair_nodes = set(df_pairs['PairID'].values)
     donor_nodes = set(df_donors['DonorID'].values)
-    
-
     model = Model("KidneyExchange")
-    model.setParam("OutputFlag", 0)  # Optional: silence solver output
-
-    # y_e binary variables for each edge
-    y = {
-        e: model.addVar(vtype=GRB.BINARY, name=f"y_{e}")
-        for e in graph.edges
-    }
-
-    # Flow indicator variables per node
+    model.setParam("OutputFlag", 0)
+    y = {e: model.addVar(vtype=GRB.BINARY, name=f"y_{e}") for e in graph.edges}
     f_in = {v: model.addVar(name=f"f_in_{v}") for v in all_nodes}
     f_out = {v: model.addVar(name=f"f_out_{v}") for v in all_nodes}
-
     model.update()
-
-    # Link flow indicators to edge usage
     for v in all_nodes:
         in_edges = list(graph.in_edges(v))
         out_edges = list(graph.out_edges(v))
-
         model.addConstr(quicksum(y[e] for e in in_edges) == f_in[v])
         model.addConstr(quicksum(y[e] for e in out_edges) == f_out[v])
-
-    # Pair node flow constraints
     for v in pair_nodes:
         model.addConstr(f_out[v] <= f_in[v])
         model.addConstr(f_in[v] <= 1)
-
-    # Donor node flow constraints
     for v in donor_nodes:
         model.addConstr(f_out[v] <= 1)
-
-    # Objective: maximize number of selected edges
     model.setObjective(quicksum(y.values()), GRB.MAXIMIZE)
-
-    # Iteratively eliminate long cycles
     cycles_eliminated = 0
     while True:
         model.optimize()
-
         if model.status != GRB.OPTIMAL:
             print("No optimal solution found.")
             return None
-
         selected_edges = [e for e in y if y[e].X > 0.5]
-
-        # Check for long cycles
         subgraph = nx.DiGraph()
         subgraph.add_edges_from(selected_edges)
         cycles = list(nx.simple_cycles(subgraph))
         long_cycles = [c for c in cycles if len(c) > max_cycle]
-
         if not long_cycles:
-            print("Number of removed Cycles: {}".format(cycles_eliminated))
-            return selected_edges  # Final solution
-
-        # TODO: Remove all cycles in long_cycles
+            print("Number of removed Cycles:", cycles_eliminated)
+            return selected_edges
+        for cycle in long_cycles:
+            model.addConstr(quicksum(
+                y[(cycle[i], cycle[(i+1) % len(cycle)])]
+                for i in range(len(cycle))
+                if (cycle[i], cycle[(i+1) % len(cycle)]) in y
+            ) <= len(cycle) - 1)
+        cycles_eliminated += len(long_cycles)
         model.update()
 
-# ------------------------------------------------------------
-
+# ---------- Run Tests ----------
 if __name__ == "__main__":
+    print("--- Compatibility Graph (no pruning) ---")
     G = build_graph(df_pairs, pruning=False)
-    print(G.number_of_edges())
+    print("Edges (expected 152 if full dataset):", G.number_of_edges())
+
+    print("--- After Pruning ---")
     G = build_graph(df_pairs, pruning=True)
-    print(G.number_of_edges())
-    solution = recursive_algorithm(G, df_pairs, df_donors, 7)
-    print("Number of kidneys transplanted: {}".format(len(solution)))
-    solution = recursive_algorithm(G, df_pairs, df_donors, 3)
-    print("Number of kidneys transplanted: {}".format(len(solution)))
+    print("Edges after pruning:", G.number_of_edges())
+
+    print("--- No altruistic donors, cycle ≤ 7 ---")
+    empty_donors = pd.DataFrame(columns=["DonorID", "D_BT", "D_HLA", "D_CMV", "D_Wt", "D_Age"])
+    solution = recursive_algorithm(G, df_pairs, empty_donors, 7)
+    print("Number of transplants:", len(solution))
+
+    print("--- No altruistic donors, cycle ≤ 3 ---")
+    empty_donors = pd.DataFrame(columns=["DonorID", "D_BT", "D_HLA", "D_CMV", "D_Wt", "D_Age"])
+    solution = recursive_algorithm(G, df_pairs, empty_donors, 3)
+    print("Number of transplants:", len(solution))
+
+    print("--- With altruistic donors, cycle ≤ 3 ---")
     G = build_graph(df_pairs, df_donors, pruning=True)
     solution = recursive_algorithm(G, df_pairs, df_donors, 3)
-    print("Number of kidneys transplanted: {}".format(len(solution)))
+    print("Number of transplants:", len(solution))
+
     plot_graph(G, solution)
