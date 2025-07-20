@@ -1,4 +1,4 @@
-# WI000974
+# Modeling, Optimization and Simulations in Operations Management [WI000974](https://campus.tum.de/tumonline/wbModHBReport.wbGenHTMLForBeschr?pKnotenNr=728525&pSemesterNr=176&pLangCode=DE)
 ### Modeling and Optimization section:
 - Introduction to Linear Programming and Python
 - Model building with Gurobi
