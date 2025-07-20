@@ -23,7 +23,7 @@
 ## Semester 6
 
 ##
-### Applied Geometry and Discrete Mathematics Group (M9 at TUM)
+### Applied Geometry & Discrete Mathematics Group (M9 at TUM)
 1. Einführung in die Optimierung (*Introduction to Optimization*)
 2. Graph Theory
 3. Discrete Optimization
@@ -52,6 +52,6 @@
 ### Department of Operations & Technology [kurse](OT)
 1. Operations Research and Decision Analysis
 2. Production & Logistics
-3. Machine Learning for Business Analytics (Professorship of Business Analytics and Intelligent Systems)
+3. Machine Learning for Business Analytics (Professorship of Business Analytics & Intelligent Systems)
 4. Modeling, Optimization & Simulations in Operations Management (Chair of Operations Management)
 5. Applied Discrete Optimization (Chair of Operations Research)
