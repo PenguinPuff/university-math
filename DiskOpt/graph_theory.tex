@@ -1,0 +1,159 @@
+\documentclass{article}	
+% \usepackage[
+%   height=2in,      % height of the text block
+%   width=7in,       % width of the text block
+%   top=100pt,        % distance of the text block from the top of the page
+%   headheight=48pt, % height for the header block
+%   headsep=30pt,    % distance from the header block to the text block
+%                % ensure an integer number of lines
+%            % show the values of the parameters in the log file
+% ]{geometry}
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{duckuments}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage[OT1]{fontenc}
+\usetikzlibrary{automata,positioning}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{shapes.multipart}
+\usepackage{hyperref}
+\usepackage{amssymb}
+% \renewcommand{\familydefault}{\sfdefault}
+
+\fancypagestyle{otherpages}{
+    \fancyhf{}1
+    \fontfamily{ppl}
+    \fancyhead[LO]{Graph Theory}
+    \fancyhead[RO]{[CIT]}
+    \fancyfoot[RO]{Seite \thepage}
+    \fancyfoot[LO]{Penguin}
+}
+\usepackage{amsmath}
+\usepackage{lastpage} % To reference last page's number
+\begin{document}
+\begin{center}
+    \begin{minipage}{0.15\textwidth}
+        \includegraphics[width=\linewidth]{/home/penguin/Documents/Studium/tum-logo/AGDM.png} 
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.6\textwidth}
+        \centering
+        \fontfamily{ppl} \selectfont 
+        \textcolor[HTML]{165DB1}{Graph Theory} \\[1ex]
+        \textcolor[HTML]{165DB1}{Chair of Operations Research} \\[1ex]
+        \textcolor[HTML]{165DB1}{School of Computation, Information \& Technology}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.12\textwidth}
+        \includegraphics[width=\linewidth]{/home/penguin/Documents/Studium/tum-logo/tum-logo.png} 
+    \end{minipage}
+\end{center}
+\noindent
+\large 
+\vspace{5mm}
+\normalsize
+\section*{Graph Theory (Einf\"uhrung in die Graphentheorie)}
+\subsection*{Contents}
+\subsubsection*{Basics}
+\begin{enumerate}
+    \item Basic definitions and Operations on graphs
+    \begin{enumerate}
+        \item Incident, joins, adjacent, homomorphism
+        \item Graph property
+        \begin{enumerate}
+            \item Containing a graph 
+            \item Graph invariant
+        \end{enumerate}
+        \item Operations on graphs
+        \begin{enumerate}
+            \item disjoint
+            \item subgraph
+            \item proper subgraph
+            \item induced subgraph
+            \item induces
+            \item graph sum
+            \item graph product
+            \item complement
+        \end{enumerate}
+    \end{enumerate}
+    \item Degree of Vertices
+    \begin{enumerate}
+        \item neigbors
+        \item degree (minimum degree, maximum degree, average degree, edge-vertex degree)
+    \end{enumerate}
+    \item Paths \& Cycles
+    \begin{enumerate}
+        \item end vertices, inner vertices, length, independent, connected
+        \item cycle, girth, circumference, chord, distance, central, radius
+        \item walk
+    \end{enumerate}
+    \item Connectivity
+    \begin{enumerate}
+        \item separator, bridge
+        \item (vertex) connectivity
+        \item complete
+        \item edge-connectivity
+    \end{enumerate}
+    \item Trees and forests (vertices of degree are in a tree are called leaves)
+    \begin{enumerate}
+        \item spanning tree, rooted tree
+        \item parent (predecessor), child, height and depth of a vertex
+        \item independent or stable set, independence number
+        \item weighted graph, minimum spanning tree (Kruskal algorithm $O(m^{2}$))
+    \end{enumerate}
+    \item Bipartite graphs
+    \item Graph minors (deleting an edge, contracting an edge, deleting a vertex)
+    \begin{enumerate}
+        \item subdivision,sepalogical minor
+        \item Euler tours (Eulerian)
+    \end{enumerate}
+\end{enumerate}
+\pagestyle{otherpages}
+\subsubsection*{Matchings}
+\begin{enumerate}
+    \item definition, $h$-regular
+    \item Matchings in Bipartite games
+    \begin{enumerate}
+        \item alternating path
+        \item augmenting path
+        \item vertex cover
+        \item maximum cardinality
+    \end{enumerate}
+    \item Theorems
+    \begin{enumerate}
+        \item K\"onig's theorem (maximum cardinality)    
+        \item Hall's theorem
+    \end{enumerate}
+    \item Chinese Postman problem (see ADO)
+\end{enumerate}
+\subsubsection*{Connectivity}
+\begin{enumerate}
+    \item Menge's theorem (minimum number of vertices)
+\end{enumerate}
+\subsubsection*{Planar graphs}
+\begin{enumerate}
+    \item Topological prerequisites
+    \begin{enumerate}
+        \item homomorphism
+        \item straigh-line-segment
+        \item polgon
+        \item polgonal arc
+        \item plane graph
+        \item regions
+        \item frontier
+    \end{enumerate}
+    \item Jordan curve theorem for Polygons
+    \item Plane graphs (faces, outer face, inner faces, boundary, incident)
+    \item A graph $G = (V,E)$ with $|E| \geq 2$ is 2-connected iff it has an open ear decomposition
+\end{enumerate}
+\subsubsection*{Colorings}
+\subsubsection*{Ramsey theory for graphs}
+\newpage
+
+\end{document}
+
+
