@@ -1,0 +1,138 @@
+\documentclass{article}	
+% \usepackage[
+%   height=2in,      % height of the text block
+%   width=7in,       % width of the text block
+%   top=100pt,        % distance of the text block from the top of the page
+%   headheight=48pt, % height for the header block
+%   headsep=30pt,    % distance from the header block to the text block
+%                % ensure an integer number of lines
+%            % show the values of the parameters in the log file
+% ]{geometry}
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{duckuments}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage[OT1]{fontenc}
+\usetikzlibrary{automata,positioning}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{shapes.multipart}
+\usepackage{hyperref}
+\usepackage{amssymb}
+% \renewcommand{\familydefault}{\sfdefault}
+
+\fancypagestyle{otherpages}{
+    \fancyhf{}
+    \fontfamily{ppl} \selectfont 
+    \fancyhead[LO]{Applied Discrete Optimization}
+    \fancyhead[RO]{[WI000819]}
+    \fancyfoot[RO]{Seite \thepage}
+    \fancyfoot[LO]{Penguin}
+}
+\usepackage{amsmath}
+\usepackage{lastpage} % To reference last page's number
+\begin{document}
+\begin{center}
+    \begin{minipage}{0.15\textwidth}
+        \includegraphics[width=\linewidth]{/home/penguin/Documents/Studium/tum-logo/AGDM.png} 
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.4\textwidth}
+        \centering
+        \fontfamily{ppl} \selectfont 
+        \textcolor[HTML]{165DB1}{Applied Discrete Optimization} \\[1ex]
+        \textcolor[HTML]{165DB1}{Chair of Operations Research} \\[1ex]
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.12\textwidth}
+        \includegraphics[width=\linewidth]{/home/penguin/Documents/Studium/tum-logo/tum-logo.png} 
+    \end{minipage}
+\end{center}
+\noindent
+\normalsize
+\section*{Applied Discrete Optimization}
+\subsection*{Contents}
+\begin{enumerate}
+    \item Review of Linear Programming
+    \begin{enumerate}
+        \item Simplex algorithm
+        \item Basics of Polyhedral theory
+    \end{enumerate}
+    \item Public transport Optimization (Vehicle \& crew scheduling)
+    \begin{enumerate}
+        \item Minimum Cost Flow problem
+        \item Shortest Path problem (with and without resource constraints): solved using Dynamic Proramming
+        \item Directed Acyclic Graphs
+    \end{enumerate}
+    \item Column generation and Dantzig Wolfe decomposition
+    \begin{enumerate}
+        \item Integer Knapsack problem (NP-hard)
+        \item Cutting Stock problem (NP-hard)
+        \begin{enumerate}
+            \item Kantorovich formulation
+            \item Gilmore-Gomory formulation 
+        \end{enumerate}
+        \item Vertex coloring problem
+        \begin{enumerate}
+            \item Stable set
+        \end{enumerate}
+        \item Multi-commodity flow problem  
+    \end{enumerate}
+    \item Combinatorial auctions
+    \begin{enumerate}
+        \item 0-1 Knapsack problem
+    \end{enumerate}
+    \item Resource-constrained project scheduling
+    \item Bender's decomposition
+    \begin{enumerate}
+        \item Capacitated facility location problem
+    \end{enumerate}
+    \item Branch \& Bound, Branch \& Cut
+    \begin{enumerate}
+        \item LP based B\&B
+    \end{enumerate}
+    \item Lagrangian relaxation
+    \begin{enumerate}
+        \item Uncapacitated facility location problem
+        \item Geoffrion's theorem
+        \item Subgradient method (Polyak theorem)
+    \end{enumerate}
+    \item Kidney exchange networks
+    \begin{enumerate}
+        \item Price Collecting Traveling Salesman problem
+        \item Ford-Fulkerson algorithm
+        \item Max-flow min-cut theorem
+        \item Cutting Plane algorithms
+    \end{enumerate}
+    \item Branch-and-Price-and-Cut
+    \item Traffic paradoxes and route guidance
+    \begin{enumerate}
+        \item Nonatomatic Selfish Routing
+        \item Pigou example
+    \end{enumerate}
+    \item Routing of Automated Guided Vehicles (AGVs)
+    \begin{enumerate}
+        \item Primal Heuristics
+        \item Static Routing approach
+        \item Dynamic Routing approach
+        \item Kiel's Canal Ship Traffic Control problem
+        \item Heuristic approach
+    \end{enumerate}
+    \item Graph Theory
+    \begin{enumerate}
+        \item Eulerian Paths and Cycles
+        \begin{enumerate}
+           \item Fleury's algorithm
+           \item Hierholzer's algorithm
+        \end{enumerate}
+        \item Directed graphs
+        \item Matchings
+        \item Chinese Postman problem
+    \end{enumerate}
+\end{enumerate}
+\end{document}
+
+
