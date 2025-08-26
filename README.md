@@ -1,57 +1,62 @@
 # University Mathematics
-## Semester 1
+## Compulsory Courses (Pflichtfach)
+### Analysis Courses
 1. Analysis 1
-2. Lineare Algebra 1 (*Linear Algebra 1*)
-3. Einführung in die Programmierung (*Introduction to Programming*)
+2. Analysis 2
+3. Analysis 3
 
-## Semester 2
-1. Analysis 2
-2. Lineare Algebra 2 (*Linear Algebra 2*)
-3. Diskrete Mathematik (*Discrete Mathematics*)
-4. 
+### Linear Algebra (& Discrete Mathematics) Courses
+1. Lineare Algebra 1
+2. Lineare Algebra 2
+3. Diskrete Mathematik
 
-## Semester 3
-1. Analysis 3
-2. Numerik (*Numerical Analysis*)
-3. Einführung in die Wahrscheinlichkeitstheorie und Statistik (*Introduction to Probability Theory and Statistics*)
-4. 
+### Statistics and Probability Theory Courses
+1. Einführung in die Wahrscheinlichkeitstheorie und Statistik
 
-## Semester 4
-
-## Semester 5
-
-## Semester 6
-
-##
-### Applied Geometry & Discrete Mathematics Group (M9 at TUM)
-1. Einführung in die Optimierung (*Introduction to Optimization*)
-2. Graph Theory
-3. Discrete Optimization
-4. Polyhedral Combinatorics
-
-### Arbeitsgruppe Algebra (M11 at TUM)
+### Algebra and Geometry
 1. Algebra
+
+### Numerical Analysis
+1. Numerik
+
+## Others
+1. Foundations of Optimization for Mathematical Optimization
+
+## Courses categorized by Research Groups, Chairs or Departments
+### Applied Geometry & Discrete Mathematics Group (M9)
+1. Scheduling
+2. Introduction to Optimization (*Einführung in die Optimierung*)
+3. Graph Theory
+4. Discrete Optimization
+5. Polyhedral Combinatorics
 
 ### Chair of Decision Sciences & Systems
 1. Computational Social Choice
-2. Algorithmic Game Theory 
+2. Algorithmic Game Theory
+3. Business Analytics and Machine Learning
 
-### Kurse in angewandter Mathematik in den Bereichen Informatik, Elektrotechnik und anderen Fächern 
-(Applied Mathematics courses in areas of Computer Science, Electrical Engineering and other subjects)
-1. Control Theory (Chair of Automatic Control Engineering)
-2. Diskrete Strukturen (*Discrete Structures*)
-3. Convex Optimization (Chair of Signal Processing)
-4. Diskrete Wahrscheinlichkeitstheorie (*Discrete Probability Theory*)
-5. Einführung in die Theoretische Informatik (*Introduction to Theoretical Computer Science*)
+### Chair of Theoretical Computer Science
+1. Introduction to Theoretical Computer Science (*Einführung in die Theoretische Informatik*)
 
-### Mathematik [kurse](MBNW) im Bereich der TUM-BWL
+### Department of Operations & Technology [kurse](OT)
+1. Operations Research and Decision Analysis
+2. Production & Logistics 
+3. Machine Learning for Business Analytics (Professorship of Business Analytics & Intelligent Systems)
+4. Modeling, Optimization & Simulations in Operations Management (Chair of Operations Management)
+5. Applied Discrete Optimization (Chair of Operations Research)
+
+### Mathematics [courses](MBNW) in TUM-BWL
 1. Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 1 (*Mathematics in Natural and Economic Sciences 1*)
 2. Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 2 (*Mathematics in Natural and Economic Sciences 2*)
 3. Introduction to Data Science and Statistical Thinking 
 
-### Department of Operations & Technology [kurse](OT)
-1. Operations Research and Decision Analysis
-2. Production & Logistics
-3. Machine Learning for Business Analytics (Professorship of Business Analytics & Intelligent Systems)
-4. Modeling, Optimization & Simulations in Operations Management (Chair of Operations Management)
-5. Applied Discrete Optimization (Chair of Operations Research)
+### Kurse in angewandter Mathematik in den Bereichen Informatik, Elektrotechnik und anderen Fächern 
+(Applied Mathematics courses in Computer Science, Electrical Engineering and other subjects)
+1. Discrete Structures (*Diskrete Strukturen*)
+2. Control Theory (Chair of Automatic Control Engineering)
+3. Convex Optimization (Chair of Signal Processing)
+4. Discrete Probability Theory (*Diskrete Wahrscheinlichkeitstheorie*)
+5. Machine Learning
+
+
+
