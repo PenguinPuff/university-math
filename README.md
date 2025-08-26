@@ -20,7 +20,7 @@
 1. Numerik
 
 ## Others
-1. Foundations of Optimization for Mathematical Optimization
+1. Foundations of Optimization for Machine Learning
 
 ## Courses categorized by Research Groups, Chairs or Departments
 ### Applied Geometry & Discrete Mathematics Group (M9)
@@ -41,9 +41,9 @@
 ### Department of Operations & Technology [kurse](OT)
 1. Operations Research and Decision Analysis
 2. Production & Logistics 
-3. Machine Learning for Business Analytics (Professorship of Business Analytics & Intelligent Systems)
-4. Modeling, Optimization & Simulations in Operations Management (Chair of Operations Management)
-5. Applied Discrete Optimization (Chair of Operations Research)
+3. Machine Learning for Business Analytics (*Professorship of Business Analytics & Intelligent Systems*)
+4. Modeling, Optimization & Simulations in Operations Management (*Chair of Operations Management*)
+5. Applied Discrete Optimization (*Chair of Operations Research*)
 
 ### Mathematics [courses](MBNW) in TUM-BWL
 1. Mathematische Behandlung der Natur- und Wirtschaftswissenschaften 1 (*Mathematics in Natural and Economic Sciences 1*)
@@ -52,11 +52,12 @@
 
 ### Kurse in angewandter Mathematik in den Bereichen Informatik, Elektrotechnik und anderen Fächern 
 (Applied Mathematics courses in Computer Science, Electrical Engineering and other subjects)
-1. Discrete Structures (Department of Computer Science)
-2. Control Theory (Chair of Automatic Control Engineering)
-3. Convex Optimization (Chair of Signal Processing)
-4. Discrete Probability Theory (Professur für Ethics in Systems Design and Machine Learning)
-5. Machine Learning (Data Analytics and Machine Learning Group)
+1. Discrete Structures (*Department of Computer Science*)
+2. Modeling of Uncertainty and Data in Engineering Science (*Munich School of Engineering*)
+3. Control Theory (*Chair of Automatic Control Engineering*)
+4. Convex Optimization (*Chair of Signal Processing*)
+5. Discrete Probability Theory (*Professur für Ethics in Systems Design and Machine Learning*)
+6. Machine Learning (*Data Analytics and Machine Learning Group*)
 
 
 
