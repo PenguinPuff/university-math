@@ -52,11 +52,11 @@
 
 ### Kurse in angewandter Mathematik in den Bereichen Informatik, Elektrotechnik und anderen Fächern 
 (Applied Mathematics courses in Computer Science, Electrical Engineering and other subjects)
-1. Discrete Structures (*Diskrete Strukturen*)
+1. Discrete Structures (Department of Computer Science)
 2. Control Theory (Chair of Automatic Control Engineering)
 3. Convex Optimization (Chair of Signal Processing)
-4. Discrete Probability Theory (*Diskrete Wahrscheinlichkeitstheorie*)
-5. Machine Learning
+4. Discrete Probability Theory (Professur für Ethics in Systems Design and Machine Learning)
+5. Machine Learning (Data Analytics and Machine Learning Group)
 
 
 
